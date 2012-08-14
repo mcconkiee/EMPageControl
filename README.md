@@ -3,6 +3,8 @@ EMPageControl
 
 UIControl for iOS that allows for custom images instead of those tiny light gray dots that fit poorly on light gray backgrounds. Yeah, you've probably been there....
 
+![sample](https://img.skitch.com/20120815-gkw1fu5mn39731dj8daj261bab.png)
+
 While not an actual UIPageControl, the behaviour is almost exactly the same. EMPageControl can implement optional delegate calls to help facilitate the look and behavior. Both are optional:
 
 imageForPage asks for a UIIMage to represent the page and state(selected || not selected)
