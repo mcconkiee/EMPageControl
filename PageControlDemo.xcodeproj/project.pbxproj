@@ -25,6 +25,8 @@
 		A189CC5815DAFE5300E3E30E /* home_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A189CC5415DAFE5300E3E30E /* home_unselected.png */; };
 		A189CC5A15DAFE5300E3E30E /* reddot.png in Resources */ = {isa = PBXBuildFile; fileRef = A189CC5615DAFE5300E3E30E /* reddot.png */; };
 		A189CC5C15DAFE7300E3E30E /* graydot.png in Resources */ = {isa = PBXBuildFile; fileRef = A189CC5B15DAFE7300E3E30E /* graydot.png */; };
+		A189CC5E15DAFFCC00E3E30E /* pacman.png in Resources */ = {isa = PBXBuildFile; fileRef = A189CC5D15DAFFCC00E3E30E /* pacman.png */; };
+		A189CC6215DB04EC00E3E30E /* running.png in Resources */ = {isa = PBXBuildFile; fileRef = A189CC6115DB04EC00E3E30E /* running.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		A189CC5415DAFE5300E3E30E /* home_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_unselected.png; sourceTree = "<group>"; };
 		A189CC5615DAFE5300E3E30E /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
 		A189CC5B15DAFE7300E3E30E /* graydot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graydot.png; sourceTree = "<group>"; };
+		A189CC5D15DAFFCC00E3E30E /* pacman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pacman.png; sourceTree = "<group>"; };
+		A189CC6115DB04EC00E3E30E /* running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = running.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		A16EE81F15DAE59A0095DC45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A189CC6115DB04EC00E3E30E /* running.png */,
+				A189CC5D15DAFFCC00E3E30E /* pacman.png */,
 				A189CC5315DAFE5300E3E30E /* home_selected.png */,
 				A189CC5415DAFE5300E3E30E /* home_unselected.png */,
 				A189CC5B15DAFE7300E3E30E /* graydot.png */,
@@ -245,6 +251,8 @@
 				A189CC5815DAFE5300E3E30E /* home_unselected.png in Resources */,
 				A189CC5A15DAFE5300E3E30E /* reddot.png in Resources */,
 				A189CC5C15DAFE7300E3E30E /* graydot.png in Resources */,
+				A189CC5E15DAFFCC00E3E30E /* pacman.png in Resources */,
+				A189CC6215DB04EC00E3E30E /* running.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

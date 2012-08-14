@@ -6,6 +6,29 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+@interface Dot : UIView
+
+@end
+@implementation Dot
+-(void)layoutSubviews
+{
+    [self setBackgroundColor:[UIColor clearColor]];
+}
+
+-(void)drawRect:(CGRect)rect
+{
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGContextSetFillColorWithColor(ctx, [UIColor yellowColor].CGColor);
+    
+    CGContextAddEllipseInRect(ctx, rect);
+    CGContextAddPath(ctx, path);
+    CGContextFillPath(ctx);
+    CGPathRelease(path);
+}
+
+@end
+
 #import "EMViewController.h"
 #define  kPages 5
 @interface EMViewController ()
@@ -30,19 +53,39 @@
     [(EMPageControl*)pageControl setCurrentPage:page];
     NSLog(@"current page: %d",page);
 }
+
+
+
 -(void)addSomeViews
 {
+    CGFloat x= self.view.center.x;
     for (int b=0; b<kPages; b++) {
-        
+        UIView *v;
+        if (b == 0 ) {
+            UIImage *img = [UIImage imageNamed:@"pacman.png"];
+             UIImageView *iv =  [[UIImageView alloc] initWithImage:img];
+            [iv setCenter:self.view.center];
+            v = iv;
+        }else {
+            
+            v = [[Dot alloc] initWithFrame:CGRectMake(x*b, self.view.center.y -10, 20, 20)]; 
+        }
+        if (b == kPages-1) {
+            UIImage *img = [UIImage imageNamed:@"running.png"];
+            UIImageView *iv =  [[UIImageView alloc] initWithImage:img];
+            [scrollView addSubview:iv];
+            [iv setCenter:self.view.center];
+            [iv setTransform:CGAffineTransformMakeTranslation(self.view.center.x * kPages,0)];
+        }
+
+        [scrollView addSubview:v];
     }
+    [scrollView setContentSize:CGSizeMake(self.view.frame.size.width *kPages, self.view.frame.size.height)];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	[self addSomeViews];
-    int pages = kPages;
-    [scrollView setContentSize:CGSizeMake(self.view.frame.size.width *pages, self.view.frame.size.height)];
-    
     
     CGFloat ht = 20.0;
     EMPageControl *pc = [[EMPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - ht, self.view.frame.size.width, ht)
@@ -56,7 +99,7 @@
      [pc setSelectedImage:[UIImage imageNamed:@"circle_graphic_red.png"]];
      */
 
-    [pc setNumberOfPages:pages];    
+    [pc setNumberOfPages:kPages];    
     [pc addTarget:self action:@selector(onTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pc];    
     [self setPageControl:pc];
