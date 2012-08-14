@@ -84,7 +84,6 @@
         
         x+=space;
     }
-    
 }
 
 - (id)initWithFrame:(CGRect)frame
