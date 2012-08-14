@@ -15,7 +15,7 @@ sizeForPage asks for the appropriate size of a given pageControl marker in its s
 
 Optionally, one can simply declare UIImages for properites `selectedImage`/`unselectedImage` if the images are consistent(same) across the control.
 
-Use a standard `addTarget:action:forControlEvents:` for touch events.
+Use a standard `addTarget:action:forControlEvents:` for touch events. See the demo.
 
 ####Defaults
 EMPageControl will draw standard lightGray/darkGray pageControl markers if no delegate or `selectedImage`/`unselectedImage` is declared
